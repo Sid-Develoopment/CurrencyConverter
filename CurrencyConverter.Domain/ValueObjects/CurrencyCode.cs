@@ -25,6 +25,10 @@ public sealed class CurrencyCode : IEquatable<CurrencyCode>
         return new CurrencyCode(normalized);
     }
     
+    public static CurrencyCode RUB => new("RUB");
+    public static CurrencyCode USD => new("USD");
+    public static CurrencyCode EUR => new("EUR");
+    
     public bool Equals(CurrencyCode? other) => 
         other is not null && Value == other.Value;
 

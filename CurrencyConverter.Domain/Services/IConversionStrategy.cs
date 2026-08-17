@@ -12,8 +12,8 @@ public interface IConversionStrategy
         Amount amount,
         CurrencyCode from,
         CurrencyCode to,
-        IEnumerable<ExchangeRate> availableRates,
+        List<ExchangeRate> availableRates,
         ConversionOptions options);
     
-    bool CanHandle(CurrencyCode from, CurrencyCode to, IEnumerable<ExchangeRate> availableRates);
+    bool CanHandle(CurrencyCode from, CurrencyCode to, List<ExchangeRate> availableRates);
 }
